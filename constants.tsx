@@ -10,7 +10,8 @@ export const PLANTS: Plant[] = [
     price: 120,
     images: [
       'https://buceplant.com/cdn/shop/products/anubias-nana-30660796612808_800x533.jpg?v=1628343226&auto=format&fit=crop',
-      'https://pin.it/3gdfFuyB2&v=1628343226&auto=format&fit=crop'
+      'https://i.postimg.cc/fTCmR9nL/Whats-App-Image-2026-01-05-at-16-37-57.jpg&auto=format&fit=extend'
+   
     ],
     careLevel: 'Easy',
     lightRequirement: 'Low'

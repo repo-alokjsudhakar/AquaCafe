@@ -22,7 +22,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ plant, onAddToCart }) => {
 
   return (
     <div className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col h-full">
-      <div className="relative h-64 overflow-hidden">
+      <div className="relative h-64 overflow-hidden bg-slate-50">
         {/* Carousel Images */}
         <div className="relative w-full h-full">
           {plant.images.map((img, idx) => (
@@ -30,7 +30,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ plant, onAddToCart }) => {
               key={idx}
               src={img} 
               alt={`${plant.name} - view ${idx + 1}`}
-              className={`absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-all duration-500 ${
+              className={`absolute inset-0 w-full h-full object-contain transition-all duration-500 ${
                 idx === currentImageIndex ? 'opacity-100' : 'opacity-0'
               }`}
             />
@@ -42,7 +42,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ plant, onAddToCart }) => {
           <>
             <button 
               onClick={prevImage}
-              className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/20 hover:bg-white/40 backdrop-blur-md rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity"
+              className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/40 hover:bg-white/60 backdrop-blur-md rounded-full flex items-center justify-center text-slate-800 opacity-0 group-hover:opacity-100 transition-opacity"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7" />
@@ -50,7 +50,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ plant, onAddToCart }) => {
             </button>
             <button 
               onClick={nextImage}
-              className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/20 hover:bg-white/40 backdrop-blur-md rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity"
+              className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/40 hover:bg-white/60 backdrop-blur-md rounded-full flex items-center justify-center text-slate-800 opacity-0 group-hover:opacity-100 transition-opacity"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
@@ -63,7 +63,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ plant, onAddToCart }) => {
                 <div 
                   key={idx}
                   className={`w-1.5 h-1.5 rounded-full transition-all ${
-                    idx === currentImageIndex ? 'bg-white scale-125' : 'bg-white/50'
+                    idx === currentImageIndex ? 'bg-emerald-600 scale-125' : 'bg-slate-300'
                   }`}
                 />
               ))}

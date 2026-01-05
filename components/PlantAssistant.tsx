@@ -43,6 +43,7 @@ const PlantAssistant: React.FC<PlantAssistantProps> = ({ cartItems }) => {
   };
 
   const handleSend = async (e: React.FormEvent) => {
+    // ... logic remains same, just updating visual part below
     e.preventDefault();
     if ((!input.trim() && !selectedImage) || isLoading) return;
 
@@ -137,7 +138,7 @@ const PlantAssistant: React.FC<PlantAssistantProps> = ({ cartItems }) => {
           <div className="p-4 bg-white border-t border-slate-100 flex flex-col space-y-3 shrink-0">
             {selectedImage && (
               <div className="relative inline-block self-start">
-                <img src={selectedImage} alt="Preview" className="w-16 h-16 object-cover rounded-xl border-2 border-emerald-500" />
+                <img src={selectedImage} alt="Preview" className="w-16 h-16 object-contain rounded-xl border-2 border-emerald-500 bg-slate-50" />
                 <button 
                   onClick={() => setSelectedImage(null)}
                   className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-0.5 shadow-md"
