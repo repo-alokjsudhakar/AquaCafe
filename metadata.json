@@ -1,0 +1,7 @@
+{
+  "name": "AquaCafe - Aquatic Plant Boutique",
+  "description": "A premium e-commerce experience for aquarium enthusiasts, offering a curated selection of aquatic and decorative plants with a calming, natural aesthetic.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
